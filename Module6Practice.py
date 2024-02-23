@@ -25,12 +25,10 @@ def get_number(unclean_input):
 #declare variables
 total = 0
 
-unclean_input = input('Please enter how many numbers you want to add: ')
-numbers = get_number(unclean_input)
+numbers = get_number(input('Please enter how many numbers you want to add: '))
 
 for i in range(numbers):
-    unclean_input = input('Please enter a number to add: ')
-    input_num = get_number(unclean_input)
+    input_num = get_number(input('Please enter a number to add: '))
     total += input_num
 
 print(f'The total sum is {total}')
