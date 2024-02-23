@@ -1,14 +1,13 @@
 #Functions are ways we can modulize our program.
 
 #Functions
-def get_input():
+def get_number(unclean_input):
 
     while True:
-        user_input = input('please enter a number: ')
         
         try:
-            clean_input = int(user_input)
-            print('clean_input:',type(clean_input))
+            clean_input = int(unclean_input)
+            #print('clean_input:',type(clean_input))
             break
         except:
             print('that\'s not a number')
@@ -21,5 +20,17 @@ def get_input():
 
 
 #Main Program
-my_input = get_input()
-print('user input:',my_input)
+#calculator
+
+#declare variables
+total = 0
+
+unclean_input = input('Please enter how many numbers you want to add: ')
+numbers = get_number(unclean_input)
+
+for i in range(numbers):
+    unclean_input = input('Please enter a number to add: ')
+    input_num = get_number(unclean_input)
+    total += input_num
+
+print(f'The total sum is {total}')
