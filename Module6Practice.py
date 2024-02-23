@@ -54,3 +54,20 @@ say_something_nice()
 greeting(input('What is your name? '))
 
 print(square_num(get_number(input('Please enter a number: ')))) 
+
+print('---')
+#Import libraries
+import requests
+zip = input('please enter a zip code: ')
+api_key = input('please enter your API key: ')
+url = f"http://api.openweathermap.org/data/2.5/weather?zip={zip}&appid={api_key}&units=metric"
+
+response = requests.get(url)
+
+data = response.json() #put response in usable format
+
+city = data['name']
+temp = data['main']['temp']
+weather_condition = data['weather'][0]['description']
+
+print(f'Weather in {city}: {temp} C, {weather_condition}')
