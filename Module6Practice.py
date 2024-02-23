@@ -32,3 +32,25 @@ for i in range(numbers):
     total += input_num
 
 print(f'The total sum is {total}')
+
+
+#Three different functions
+
+#Function to just run code
+def say_something_nice():
+    print('Wow! Nice hair cut!')
+
+#Function that needs parameters
+def greeting(name):
+    print(f'Hi {name}, how are you?')
+
+#Function that returns something
+def square_num(number):
+    return number * number
+
+#Main Program
+say_something_nice()
+
+greeting(input('What is your name? '))
+
+print(square_num(get_number(input('Please enter a number: ')))) 
