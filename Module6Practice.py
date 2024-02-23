@@ -13,10 +13,13 @@ def get_input():
         except:
             print('that\'s not a number')
 
+    return clean_input
+
     
     #print('user_input:',type(user_input))
     
 
 
 #Main Program
-get_input()
+my_input = get_input()
+print('user input:',my_input)
